@@ -1,3 +1,3 @@
-from src.cli import cep
+from src.cli import cep_cli
 
-cep()
+cep_cli()
