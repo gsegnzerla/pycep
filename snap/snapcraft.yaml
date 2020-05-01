@@ -1,0 +1,26 @@
+name: pycep
+base: core18
+version: '1.0'
+summary: A simple application that get information from an address
+description: |
+  This simple cli is used to get some information from an address like cep
+  number, steet name, city, etc.
+
+grade: stable
+confinement: strict
+
+parts:
+  pycep:
+    plugin: python
+    python-version: python3
+    source: .
+    python-packages:
+      - click
+      - requests
+
+apps:
+  pycep:
+    command: bin/pycep
+    plugs:
+      - home
+      - network
