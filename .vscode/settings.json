@@ -1,5 +1,5 @@
 {
-    "python.pythonPath": "/home/guilherme/.virtualenvs/pycep-sPxEKGH0/bin/python",
+    "python.pythonPath": "/home/guilherme/.local/share/virtualenvs/pycep-sPxEKGH0/bin/python",
     "python.testing.unittestArgs": [
         "-v",
         "-s",
