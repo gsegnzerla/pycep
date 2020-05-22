@@ -1,6 +1,6 @@
 import click
 from src.cep import Cep
-
+from pprint import pprint
 
 @click.group('cep_cli')
 def cep_cli():
@@ -13,8 +13,8 @@ def cep_cli():
 def cep(nr_cep):
     """Type <number> to request by cep."""
     cep = Cep()
-    response = cep.get_cep(nr_cep)
-    click.echo(response.text)
+    data = cep.get_cep(nr_cep).json()
+    pprint(data)
 
 @cep_cli.command()
 @click.argument('uf', type=click.STRING)
@@ -23,6 +23,6 @@ def cep(nr_cep):
 def name(uf, city, street):
     """Type <uf> <city> <street> to request by name's street."""
     cep = Cep()
-    response = cep.get_cep_by_name(uf, city, street)
+    data = cep.get_cep_by_name(uf, city, street).json()
 
-    click.echo(response.text)
+    pprint(data)
