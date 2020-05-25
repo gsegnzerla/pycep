@@ -1,6 +1,6 @@
 name: pycep
 base: core18
-version: '1.0'
+version: '1.2'
 summary: A simple application that get information from an address
 description: |
   This simple cli is used to get some information from an address like cep
